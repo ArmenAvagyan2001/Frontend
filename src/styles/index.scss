@@ -1,0 +1,12 @@
+// Global
+@import "./global/reset";
+
+// Pages
+@import "./pages/login";
+@import "./pages/register";
+@import "pages/Client/clientPanel";
+@import "pages/Client/posts";
+@import "pages/Client/addPost";
+@import "pages/Client/popupAddPost";
+@import './pages/Admin/adminPanel';
+@import './pages/Admin/users';

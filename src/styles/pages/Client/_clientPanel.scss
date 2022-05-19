@@ -1,0 +1,26 @@
+.ClientPanel {
+  div {
+    .topNav {
+      display: flex;
+      padding: 10px 20px;
+      background: green;
+
+      h1 {
+        flex-grow: 1;
+        color: white;
+        font-size: 36px;
+      }
+
+      button {
+        background: rgb(255, 0, 0);
+        height: 40px;
+        border: 1px solid green;
+        border-radius: 10px;
+
+        &:hover {
+          background: rgba(255, 0, 0, 0.82);
+        }
+      }
+    }
+  }
+}

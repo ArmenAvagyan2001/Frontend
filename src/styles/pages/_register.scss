@@ -1,0 +1,44 @@
+.Register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  div{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 100px 50px;
+    position: relative;
+    .icon{
+      position: absolute;
+      top: 355px;
+      right: 60px;
+      background: none;
+      border: none;
+    }
+    .icon2{
+      position: absolute;
+      top: 465px;
+      right: 60px;
+      background: none;
+      border: none;
+    }
+    .login{
+      width: 350px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(0, 128, 0, 0.80);
+      color: white;
+    }
+    .login:hover{
+      background: green;
+    }
+    input{
+      width: 350px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+    }
+  }
+}
