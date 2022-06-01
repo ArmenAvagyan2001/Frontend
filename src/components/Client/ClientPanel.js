@@ -3,9 +3,9 @@ import mapStateToProps from "../../constants/mapStateToProps";
 import mapDispatchToProps from "../../constants/mapDispatchToProps";
 import {API_URL} from "../../constants/api";
 import axios from "axios";
-import Posts from "./Posts";
+import Posts from "./Posts/Posts";
 import areStatePropsEqual from "../../constants/areStatePropsEqual";
-import AddPost from "./AddPost";
+import AddPost from "./Posts/AddPost";
 
 const ClientPanel = ( { user, deleteToken, token } ) => {
 

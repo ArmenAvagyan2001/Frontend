@@ -1,10 +1,10 @@
 import {useState} from "react";
 import axios from "axios";
-import {API_URL} from "../../constants/api";
+import {API_URL} from "../../../constants/api";
 import {connect} from "react-redux";
-import mapStateToProps from "../../constants/mapStateToProps";
-import mapDispatchToProps from "../../constants/mapDispatchToProps";
-import areStatePropsEqual from "../../constants/areStatePropsEqual";
+import mapStateToProps from "../../../constants/mapStateToProps";
+import mapDispatchToProps from "../../../constants/mapDispatchToProps";
+import areStatePropsEqual from "../../../constants/areStatePropsEqual";
 
 function PopupAddPost ( { active,  setActive, token, addPost } ) {
     const [image, setImage] = useState(),
@@ -31,10 +31,10 @@ function PopupAddPost ( { active,  setActive, token, addPost } ) {
             subject,
             image: FData.get('image')
         }
-        axios.post(API_URL + `api/posts`, data, {
+
+        axios.post(API_URL + `api/client/posts`, data, {
             headers: {
                 Authorization: `Bearer ${token}`,
-                'x-device-id': 'stuff',
                 'Content-Type': 'multipart/form-data'
             }
         }).then(response => {

@@ -1,4 +1,4 @@
-import {ADD_POST, DELETE_POST, DELETE_TOKEN, SET_POSTS, SET_TOKEN, SET_USERS, DELETE_USER} from "./types";
+import {ADD_POST, DELETE_POST, DELETE_TOKEN, SET_POSTS, SET_TOKEN, SET_USERS, DELETE_USER, SET_USER_ID} from "./types";
 
 export const setToken = (token, user) => dispatch => {
     dispatch({
@@ -45,6 +45,13 @@ export const setUsers = users => dispatch => {
 export const deleteUser = id => dispatch => {
     dispatch({
         type: DELETE_USER,
+        id
+    })
+};
+
+export const setUserId = id => dispatch => {
+    dispatch({
+        type: SET_USER_ID,
         id
     })
 };

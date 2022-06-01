@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
-import mapStateToProps from "../../constants/mapStateToProps";
-import mapDispatchToProps from "../../constants/mapDispatchToProps";
-import areStatePropsEqual from "../../constants/areStatePropsEqual";
+import mapStateToProps from "../../../constants/mapStateToProps";
+import mapDispatchToProps from "../../../constants/mapDispatchToProps";
+import areStatePropsEqual from "../../../constants/areStatePropsEqual";
 import {useState} from "react";
 import PopupAddPost from "./PopupAddPost";
 

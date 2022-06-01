@@ -1,4 +1,4 @@
-import {addPost, deletePost, deleteToken, setPosts, setToken, setUsers, deleteUser} from "../actions/site";
+import {addPost, deletePost, deleteToken, setPosts, setToken, setUsers, deleteUser, setUserId} from "../actions/site";
 
 export default (dispatch) => {
     return {
@@ -9,5 +9,6 @@ export default (dispatch) => {
         addPost: post => dispatch(addPost(post)),
         setUsers: user => dispatch(setUsers(user)),
         deleteUser: id => dispatch(deleteUser(id)),
+        setUserId: id => dispatch(setUserId(id))
     }
 }

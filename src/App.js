@@ -7,8 +7,10 @@ import CentralPageUser from "./components/Client/ClientPanel";
 import areStatePropsEqual from "./constants/areStatePropsEqual";
 import Registration from "./components/Register";
 import AdminPanel from "./components/Admin/AdminPanel";
+import Users from "./components/Admin/Users";
+import User from "./components/Admin/User";
 
-function App({ token, user }) {
+function App({ token, user, id }) {
 
     return (
         <div>
@@ -21,8 +23,11 @@ function App({ token, user }) {
                         </Routes>
                         :
                         <Routes>
-                            <Route path='/' element={<AdminPanel />}/>
-                            <Route path='*' element={<Navigate to='/'/>}></Route>
+                            <Route path='/' element={<AdminPanel />}>
+                                <Route path='users' element={<Users />}></Route>
+                                <Route path='*' element={<Navigate to='/'/>}></Route>
+                            </Route>
+                            <Route path={'/user/' + id} element={<User />}/>
                         </Routes>
                     :
                     <Routes>

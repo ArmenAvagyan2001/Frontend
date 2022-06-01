@@ -5,8 +5,10 @@
 @import "./pages/login";
 @import "./pages/register";
 @import "pages/Client/clientPanel";
-@import "pages/Client/posts";
-@import "pages/Client/addPost";
-@import "pages/Client/popupAddPost";
+@import "pages/Client/Posts/posts";
+@import "pages/Client/Posts/addPost";
+@import "pages/Client/Posts/popupAddPost";
+@import "pages/Client/Posts/popupChangePost";
 @import './pages/Admin/adminPanel';
 @import './pages/Admin/users';
+@import "./pages/Admin/user";

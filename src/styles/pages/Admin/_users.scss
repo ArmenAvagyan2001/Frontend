@@ -1,43 +1,53 @@
 .Users {
   display: flex;
   justify-content: center;
-  div{
-    table{
+
+  & > div {
+    & > table {
       margin-top: 50px;
-      tbody{
-        .headers{
-          td{
+
+      & > tbody {
+        & > .headers {
+          & > td {
             font-weight: bold;
           }
         }
-        tr{
-          td{
+
+        & > tr {
+          & > td {
             padding: 10px 50px;
-            border:1px solid black ;
+            border: 1px solid black;
             text-align: center;
-            button{
+
+            & > button {
               margin: 2px 5px;
               background: none;
               border: none;
               cursor: pointer;
-              i{
+
+              & > i {
                 font-size: 20px;
               }
             }
-            .delete{
+
+            & > .delete {
               color: rgba(255, 0, 0, 0.55);
-              &:hover{
+
+              &:hover {
                 color: rgb(255, 0, 0);
               }
             }
-            .change{
+
+            & > .change {
               color: yellowgreen;
-              &:hover{
+
+              &:hover {
                 color: rgba(173, 255, 47, 0.86);
               }
             }
           }
-          .actions{
+
+          & > .actions {
             display: flex;
             border-top: none;
             border-left: none;

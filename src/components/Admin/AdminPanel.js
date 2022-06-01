@@ -6,11 +6,12 @@ import areStatePropsEqual from "../../constants/areStatePropsEqual";
 import axios from "axios";
 import {API_URL} from "../../constants/api";
 import Users from "./Users";
+import {Link, Outlet, useNavigate} from "react-router-dom"
 
 const AdminPanel = ( { user, deleteToken, token } ) => {
-
+    const navigate = useNavigate()
     const handleClickLogout = () => {
-        axios.post(API_URL + 'api/logout', {}, {
+        axios.post(API_URL + 'api/admin/logout', {}, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -23,9 +24,10 @@ const AdminPanel = ( { user, deleteToken, token } ) => {
             <div>
                 <div className='topNav'>
                     <h1>{user.name}</h1>
+                    <Link to='/users'>users</Link>
                     <button onClick={handleClickLogout}>Logout</button>
                 </div>
-                <Users />
+                <Outlet />
             </div>
         </section>
     )

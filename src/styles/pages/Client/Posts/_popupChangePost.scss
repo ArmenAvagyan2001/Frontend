@@ -1,0 +1,69 @@
+.modal_change_post {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.modal_change_post.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal_change_post_content {
+  opacity: 0;
+  pointer-events: none;
+  padding: 50px 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all .8s ease;
+  transform: translateY(-200px);
+  div {
+    label {
+      img {
+        border: 1px solid black;
+        width: 350px;
+      }
+    }
+
+    input {
+      width: 350px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.35);
+    }
+
+    #changeFile {
+      display: none;
+    }
+
+    button {
+      height: 40px;
+      width: 350px;
+      background: rgba(0, 128, 0, 0.80);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+        border: none;
+        background: green;
+      }
+    }
+  }
+}
+
+.modal_change_post_content.active{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

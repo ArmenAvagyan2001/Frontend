@@ -1,10 +1,21 @@
-import {ADD_POST, DELETE_POST, DELETE_TOKEN, DELETE_USER, SET_POSTS, SET_TOKEN, SET_USERS} from "../actions/types";
+import {
+    ADD_POST,
+    DELETE_POST,
+    DELETE_TOKEN,
+    DELETE_USER,
+    SET_POSTS,
+    SET_TOKEN,
+    SET_USER_ID,
+    SET_USERS
+} from "../actions/types";
+import {act} from "react-dom/test-utils";
 
 const initialState = {
     token: null,
     user: {},
     users: [],
-    posts: []
+    posts: [],
+    id: null
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -21,7 +32,8 @@ export default (state = initialState, action) => {
                 token: null,
                 user: {},
                 users: [],
-                posts: []
+                posts: [],
+                id:null
             }
         case SET_POSTS:
             return {
@@ -52,6 +64,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 users: state.users.filter(user => user.id !== action.id)
+            }
+        case SET_USER_ID:
+            return {
+                ...state,
+                id: action.id
             }
         default:
             return state;
